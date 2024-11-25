@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería con Scroll</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Estilo para el contenedor con scroll horizontal */
+    .gallery-container {
+      display: flex;
+      overflow-x: auto; /* Habilita el scroll horizontal */
+      gap: 10px; /* Espaciado entre imágenes */
+      padding: 10px;
+      scrollbar-width: thin; /* Personaliza la barra de scroll (para navegadores compatibles) */
+    }
+    .gallery-container::-webkit-scrollbar {
+      height: 8px;
+    }
+    .gallery-container::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 10px;
+    }
+    .gallery-container img {
+      max-height: 150px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery-container img:hover {
+      transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .selected {
+      border: 3px solid #007bff; /* Marca la imagen seleccionada */
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center">Galería de Imágenes</h2>
+    <div class="gallery-container" id="gallery">
+      <img src="https://via.placeholder.com/200" alt="Imagen 1" onclick="selectImage(this)">
+      <img src="https://via.placeholder.com/200" alt="Imagen 2" onclick="selectImage(this)">
+      <img src="https://via.placeholder.com/200" alt="Imagen 3" onclick="selectImage(this)">
+      <img src="https://via.placeholder.com/200" alt="Imagen 4" onclick="selectImage(this)">
+      <img src="https://via.placeholder.com/200" alt="Imagen 5" onclick="selectImage(this)">
+      <img src="https://via.placeholder.com/200" alt="Imagen 6" onclick="selectImage(this)">
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function selectImage(image) {
+      // Quitar la clase 'selected' de todas las imágenes
+      const images = document.querySelectorAll('.gallery-container img');
+      images.forEach(img => img.classList.remove('selected'));
+
+      // Agregar la clase 'selected' a la imagen clicada
+      image.classList.add('selected');
+    }
+  </script>
+</body>
+</html>

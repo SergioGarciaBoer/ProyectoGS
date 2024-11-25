@@ -1,0 +1,44 @@
+/* Div de todas las publicaciones */
+
+div.publicaciones{
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: white;
+    margin-top: 15px;
+}
+
+div.publicaciones div{
+    width: 80vw;
+    background-color: beige;
+    border-radius: 15px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.publicaciones div label{
+    border: none;
+    width: 100%;
+    background-color: beige;
+    color: black;
+    height: 100%;
+    border-radius: 15px;
+    font-size: 4rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.publicaciones div label:hover{
+    background-color: #C3A78D;
+}
+
+div.publicaciones div input{
+    display: none;
+}
+

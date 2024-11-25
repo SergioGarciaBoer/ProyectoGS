@@ -1,0 +1,175 @@
+.galeria-contenedor {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.imgPubli {
+    display: inline-block; 
+    width: 250px; 
+    height: 150px; 
+    object-fit: cover; 
+    margin-right: 15px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-contenedor::-webkit-scrollbar {
+    height: 8px;
+}
+
+.galeria-contenedor::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.galeria-contenedor::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Modal */
+
+.modalPubli {
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contenido-modalPubli {
+background-color: #fff;
+margin: 15% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 90%;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+display: grid;
+grid-template-columns: 1fr auto;
+grid-template-rows: auto auto;
+}
+
+.close {
+color: #aaa;
+font-size: 28px;
+font-weight: bold;
+justify-self: end;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+cursor: pointer;
+}
+
+.container-botones{
+display: grid;
+grid-template-columns: auto auto;
+}
+
+.modalPubli .contenido-modalPubli .container-botones input{
+display: none;
+}
+
+.contenido-modalPubli div#divRegistro{
+display: none;
+}
+
+.modalPubli .contenido-modalPubli .container-botones label{
+border: solid 1px;
+padding: 2px;
+text-align: center;
+align-self: center;
+border-radius: 7px;
+margin: 3px;
+}
+
+.modalPubli .contenido-modalPubli .container-botones input:checked + label{
+padding: 2px;
+text-align: center;
+align-self: center;
+border-radius: 7px;
+background-color: beige;
+}
+
+.modalPubli .contenido-modalPubli .container-botones input:checked{
+border: solid;
+text-align: center;
+align-self: center;
+border-radius: 7px;
+}
+
+.contenido-modalPubli .sesion label, .contenido-modalPubli .registro label{
+display: block;
+margin-bottom: 8px;
+font-size: 16px;
+}
+
+.contenido-modalPubli .sesion input, .contenido-modalPubli .registro input{
+width: 100%;
+padding: 6px;
+margin-bottom: 20px;
+border: 1px solid #D1B894; 
+border-radius: 5px;
+background-color: #FFF8E7; 
+color: #6B4226;
+font-size: 16px;
+outline: none;
+transition: border 0.3s ease;
+}
+
+.contenido-modalPubli .sesion input:focus, .contenido-modalPubli .registro input:focus{
+border-color: #C3A78D;
+}
+
+.contenido-modalPubli .sesion button, .contenido-modalPubli .registro button{
+width: 100%;
+padding: 12px;
+background-color: #C3A78D; 
+border: none;
+border-radius: 5px;
+color: white;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.contenido-modalPubli .sesion button:hover, .contenido-modalPubli .registro button:hover{
+background-color: #A6896C; 
+}
+
+h2{
+text-align: center;
+}
+
+p{
+width: 80%;text-align: center;
+margin-left: 5%;
+}
+
+@media (min-width: 460px) and (max-width: 767px) {
+
+div.modalPubli div.contenido-modalPubli{
+    width: 80%;
+    margin-left: 10%;
+}
+
+}
+
+@media (min-width: 768px) {
+
+    div.modal{
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    div.modal div.modal-content{
+        width: 700px;
+        position: absolute;
+    }
+  
+}

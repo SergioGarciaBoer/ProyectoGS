@@ -1,0 +1,4 @@
+
+mysql -uroot -pSergio5a7wXEEmmVhn < C:\xampp\htdocs\ProyectoGS\Base_Datos\proyecto.sql
+C:\xampp\htdocs\ProyectoGS
+SET GLOBAL max_allowed_packet = 16777216;

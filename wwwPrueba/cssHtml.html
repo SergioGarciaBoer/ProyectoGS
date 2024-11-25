@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../HTML_CSS/css/main/header.css">
+    <link rel="stylesheet" href="../HTML_CSS/css/main/perfil.css">
+    <link rel="stylesheet" href="../HTML_CSS/css/main/burguerMenu.css">
+    <link rel="stylesheet" href="../HTML_CSS/css/main/modalSesiones.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <label for="menu"> ☰ </label>
+        <h1>Titulo</h1>
+        <button id="inicioSes">Iniciar Sesión</button>
+        <button id="perfil">Perfil</button>
+    </header>
+
+    <div class="navPerfil" id="navPerfil">
+        <span id="closePerfil" class="closePerfil">&times;</span>
+        <h3>Usuario</h3>
+        <ul>
+            <li>Editar perfil</li>
+            <li id="publicaciones"><a href="publicacion.html">Publicaciones</a></li>
+            <li>Vacio</li>
+            <li id="sesionCierre">Cerrar Sesion</li>
+        </ul>
+    </div>
+
+    <nav class="navPag">
+        <input type="checkbox" id="menu">
+        <ul>
+          <li>Inicio</li>
+          <li>Sobre nosotros</li>
+          <li>Opiniones</li>
+        </ul>
+    </nav>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="container-botones">
+                <input name="iniciarSesionCB" id="iniciarSesionCB" type="checkbox" checked>
+                <label for="iniciarSesionCB">Iniciar Sesion</label>
+
+                <input name="registroCB" id="registroCB" type="checkbox">
+                <label for="registroCB">Registro</label>
+            </div>
+            <span id="closeModal" class="close">&times;</span>
+            
+            <div class="sesion" id="divInicioSesion">
+                <label for="usuario">Usuario</label>
+                <input type="text" name="usuario" id="sesionNick">
+
+                <label for="contraseña">Contraseña</label>
+                <input type="password" name="contraseña" id="sesionContrasena">
+
+                <button id="btnSesion">Iniciar Sesion</button>
+            </div>
+            <div class="registro" id="divRegistro">
+                <label for="usuario">Usuario</label>
+                <input type="text" name="usuario" id="registroNick">
+
+                <label for="contraseña">Contraseña</label>
+                <input type="password" name="contraseña" id="registroContrasena">
+
+                <label for="gmail">Gmail</label>
+                <input type="email" name="gmail" id="registroGmail">
+
+                <button id="btnRegistro">Resgistrarse</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../JavaScript/declaraciones.js"></script>
+<script src="../JavaScript/main.js"></script>
+<script src="../JavaScript/sesiones.js"></script>
+<script src="../JavaScript/perfil.js"></script>
+</html>
